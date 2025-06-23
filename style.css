@@ -12,11 +12,103 @@
     --text2: #ccc;
     --btn-bg: #2a2a3e;
     --btn-hover: #3a3a5e;
+    --display-bg: #0d1117;
     --border: #30363d;
     --shadow: #02f7ff4b;
 } 
 
-data-theme="light"
+ [data-theme="light"] {
+            --bg1: #f0f0f0;
+            --bg2: #e0e0e0;
+            --accent: #d0d0d0;
+            --neon1: #0066cc;
+            --neon2: #cc0066;
+            --neon3: #006600;
+            --neon4: #cc4400;
+            --text1: #000000;
+            --text2: #333333;
+            --btn-bg: #c0c0c0;
+            --btn-hover: #b0b0b0;
+            --display-bg: #ffffff;
+            --border: #999999;
+            --shadow: rgba(0, 102, 204, 0.3);
+        }
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Orbitron", monospce;
+    background: var(--bg1);
+    color: var(--text1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(0, 255, 65, 0.1) 0%, transparent 50%);
+    animation: backgroundPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundPulse {
+    0% { filter: brightness(1); }
+    100% { fiter: brightness(1.1); }
+}
+
+.theme-togle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.theme-switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input{
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--btn-bg);
+    transition: 0.4s;
+    border-radius: 34px;
+    border: 2px solid var(--neon1);
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--neon1);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+
+
+
+
 
 
 #calcBody{
