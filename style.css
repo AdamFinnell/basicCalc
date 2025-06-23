@@ -1,3 +1,24 @@
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+    --bg1: #0a0a0a;
+    --bg2: #1a1a2e;
+    --accent: #162113;
+    --neon1: #00ffff;
+    --neon2: #ff00ff;
+    --neon3: #00ff41;
+    --neon4: #ff6600;
+    --text1: #fff;
+    --text2: #ccc;
+    --btn-bg: #2a2a3e;
+    --btn-hover: #3a3a5e;
+    --border: #30363d;
+    --shadow: #02f7ff4b;
+} 
+
+data-theme="light"
+
+
 #calcBody{
     background-color: lightblue;
     height: 270px;
@@ -11,7 +32,7 @@
 
 body{
     display: flex;
-    /* align-items: center; */
+   
     justify-content: center;
 }
 
